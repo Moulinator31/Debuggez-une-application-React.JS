@@ -24,21 +24,32 @@ describe("When Form is created", () => {
       await screen.findByText("Message envoyé !");
     });
   });
-
 });
-
 
 describe("When a page is created", () => {
   it("a list of events is displayed", () => {
     // to implement
-  })
-  it("a list a people is displayed", () => {
-    // to implement
-  })
+  });
+
+  it("a list of people is displayed", async () => {
+    render(<Home />);
+
+    await screen.findByText("Une équipe d’experts dédiés à l’ogranisation de vos événements");
+    await screen.findByText("Samira");
+  });
+
   it("a footer is displayed", () => {
-    // to implement
-  })
+    render(< Home/>);
+
+    /**
+     * Utilisation de screen.getByText pour vérifier que le texte "Contactez-nous" est présent dans le document.
+     * Cela vérifie que la section de contact est bien rendue dans le Footer.
+     */
+    expect(screen.getByText("Contactez-nous")).toBeInTheDocument();
+    expect(screen.getByText("Notre derniére prestation")).toBeInTheDocument();
+  });
+
   it("an event card, with the last event, is displayed", () => {
     // to implement
-  })
+  });
 });
