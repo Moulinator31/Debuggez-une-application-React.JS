@@ -49,7 +49,7 @@ describe("When a page is created", () => {
     expect(screen.getByText("Notre derniére prestation")).toBeInTheDocument();
   });
 
-  it("an event card, with the last event, is displayed", () => {
-    // to implement
+  it("an event card, with the last event, is displayed", async () => {
+  
   });
 });

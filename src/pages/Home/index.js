@@ -21,7 +21,6 @@ const Page = () => {
   const last = data?.events.sort((evtA, evtB) =>
     new Date(evtB.date) - new Date(evtA.date)
   )[0];
-  console.log(last)
   return <>
     <header>
       <Menu />
